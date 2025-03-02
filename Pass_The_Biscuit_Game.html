@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pass_The_Biscuit_Game</title>
+        <title>Drawing Idea Generator</title>
     </head>
     <body>
         <h1 id="title">Pass The Biscuit Game</h1>
@@ -17,7 +17,33 @@
             </div>
          </div>
          <br>
-
+        <br>
+        <div class="inline-elements">
+            <div>
+                <label for="operation1">Select a biscuit:</label>
+                <select id="operation1">
+                    <option selected disabled></option>
+                    <option value="All">All</option> 
+                    <option value="Custard Creams">Custard Creams</option>
+                    <option value="Bourbon">Bourbon</option>
+                    <option value="Rich Tea">Rich Tea</option>
+                    <option value="Digestives">Digestives</option>
+                    <option value="Hobnobs ">Hobnobs</option>
+                    <option value="Jammie Dodgers">Jammie Dodgers</option>       
+                </select>
+            </div>
+        </div>
+        <div class="inline-elements2">
+            <div>
+                 <p id="Result1">Biscuit Selection</p>
+            </div>
+        </div>
+        <div class="inline-elements3">
+            <div>
+                <button id="Generate2">Generate</button>
+           </div>
+        </div>
+        <div><button id="RstButton" onclick="resetPage()">Reset Game</button></div>
     </body>
 </html>
 
