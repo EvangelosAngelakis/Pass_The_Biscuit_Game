@@ -15,6 +15,69 @@ body {
     padding: 5px;
 }
 #title {
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(245, 245, 245, 0.2);
     margin-top: -5px;
 }
+.text-elements {
+    font-size: 90%;
+    text-align: left;
+    align-items: left;
+    margin-left: 8px;
+    background-color: rgba(245, 245, 245, 0.2);
+}
+.inline-elements {
+    display: flex;
+    gap: 20px;
+    margin-left: 40px;
+    gap: 50px;
+}
+.inline-elements > div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 245, 245, 0.2);
+}
+.inline-elements label {
+    margin-bottom: 5px; 
+    background-color: whitesmoke 25%;
+}
+.inline-elements2 {
+    display: flex;
+    margin-left: 61px;
+    gap: 74px;
+}
+.inline-elements2 > div {
+    display: flex;
+    flex-direction: column;
+}
+.inline-elements2 label {
+    margin-bottom: 5px; 
+}
+#Generate1 {
+    background-color: burlywood;
+    height: 70px;
+    border-radius: 50%;
+    border: solid black;
+    font-weight: bold;
+}
+.inline-elements3 {
+    display: flex;
+    margin-left: 61px;
+    gap: 90px;
+}
+.inline-elements3 > div {
+    display: flex;
+    flex-direction: column;
+}
+#Result1 {
+    border: solid black;
+    width: 106px;
+    height: 35px;
+    background-color: bisque;
+    border-radius: 5px;
+    margin-left: -20px;
+    word-wrap: break-word;
+}
+#RstButton {
+    margin-top: 160px;
+}
+
