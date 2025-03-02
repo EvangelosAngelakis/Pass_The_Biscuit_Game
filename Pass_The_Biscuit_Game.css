@@ -52,16 +52,9 @@ body {
 .inline-elements2 label {
     margin-bottom: 5px; 
 }
-#Generate1 {
-    background-color: burlywood;
-    height: 70px;
-    border-radius: 50%;
-    border: solid black;
-    font-weight: bold;
-}
 .inline-elements3 {
     display: flex;
-    margin-left: 61px;
+    margin-left: 45px;
     gap: 90px;
 }
 .inline-elements3 > div {
@@ -74,8 +67,15 @@ body {
     height: 35px;
     background-color: bisque;
     border-radius: 5px;
-    margin-left: -20px;
+    margin-left: -15px;
     word-wrap: break-word;
+}
+#Generate1 {
+    background-color: burlywood;
+    height: 70px;
+    border-radius: 50%;
+    border: solid black;
+    font-weight: bold;
 }
 #RstButton {
     margin-top: 160px;
