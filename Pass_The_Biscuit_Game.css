@@ -72,8 +72,26 @@ body {
     flex-direction: column;
 }
 #timer {
+    font-size: x-large;
     border: solid black;
-    border-radius: 5px;
+    border-radius: 20%;
+    border: solid black;
+    font-weight: bold;
+}
+#startButton{
+    background-color: green;
+    height: 70px;
+    border-radius: 50%;
+    border: solid black;
+    font-weight: bold;
+}
+#RstTimer {
+    background-color: rgb(124, 1, 1);
+    color: aliceblue;
+    height: 30px;
+    border-radius: 20%;
+    border: solid black;
+    font-weight: bold;
 }
 #Result1 {
     border: solid black;
@@ -85,13 +103,13 @@ body {
     word-wrap: break-word;
 }
 #Generate1 {
-    background-color: burlywood;
+    background-color: green;
     height: 70px;
     border-radius: 50%;
     border: solid black;
     font-weight: bold;
 }
 #RstButton {
-    margin-top: 160px;
+    margin-top: 155px;
 }
 
