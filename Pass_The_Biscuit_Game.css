@@ -61,6 +61,20 @@ body {
     display: flex;
     flex-direction: column;
 }
+.inline-elements4 {
+    display: flex;
+    margin-top: -345px;
+    margin-left: 220px;
+    gap: 90px;
+}
+.inline-elements4 > div {
+    display: flex;
+    flex-direction: column;
+}
+#timer {
+    border: solid black;
+    border-radius: 5px;
+}
 #Result1 {
     border: solid black;
     width: 106px;
