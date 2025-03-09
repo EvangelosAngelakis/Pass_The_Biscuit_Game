@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+    width: 350px;
+    height: 610px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    align-items: center;
+    font-size: medium;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://www.tastingtable.com/img/gallery/18-popular-british-biscuits-ranked/l-intro-1676828380.jpg");
+    background-size: 360px 620px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid black;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px;
+}
+#title {
+    background-color: rgba(245, 245, 245, 0.2);
+    margin-top: -5px;
+}
+.text-elements {
+    font-size: 90%;
+    text-align: left;
+    align-items: left;
+    margin-left: 8px;
+    background-color: rgba(245, 245, 245, 0.2);
+}
+.inline-elements {
+    display: flex;
+    margin-left: 5px;
+    width: 355px;
+}
+.inline-elements > div {
+    display: flex;
+    flex-direction: column;
+}
+.inline-elements1 {
+    width: 120px;
+    display: flex;
+    margin-left: 10px;
+}
+.inline-elements1 > div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(245, 245, 245, 0.2);
+}
+.inline-elements1 label {
+    margin-bottom: 5px; 
+    background-color: whitesmoke 25%;
+}
+.inline-elements2 {
+    display: flex;
+    margin-left: 10px;
+}
+.inline-elements2 > div {
+    display: flex;
+    flex-direction: column;
+}
+.inline-elements3 {
+    display: flex;
+    margin-left: 5px;
+    width: 355px;
+    gap: 14px;
+}
+.inline-elements3 > div {
+    display: flex;
+    flex-direction: column;
+}
+.inline-elements4 {
+    display: flex;
+    width: 150px;
+    margin-top: 160px;
+    margin-left: 135px;
+}
+.inline-elements4 > div {
+    display: flex;
+    flex-direction: row;
+}
+#Generate1 {
+    background-color: green;
+    color: wheat;
+    height: 70px;
+    border-radius: 50%;
+    border: solid black;
+    font-weight: bold;
+}
+#Result1 {
+    border: solid black;
+    width: 106px;
+    height: 35px;
+    font-weight: bold;
+    background-color: bisque;
+    border-radius: 5px;
+    margin-right: 15px;
+    word-wrap: break-word;
+}
+#startButton{
+    background-color: green;
+    color: wheat;
+    height: 70px;
+    width: 90px;
+    border-radius: 50%;
+    border: solid black;
+    font-weight: bold;
+}
+#timer {
+    font-size: x-large;
+    border: solid black;
+    height: 30px;
+    width: 110px;
+    border-radius: 20%;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#RstTimer {
+    background-color: rgb(124, 1, 1);
+    color: aliceblue;
+    height: 50px;
+    width: 110px;
+    border-radius: 25%;
+    border: solid black;
+    font-weight: bold;
+    margin-top: 8px;
+}
+#RstButton {
+
+}
+        </style>
+        <title>Drawing Idea Generator</title>
+    </head>
+    <body>
+        <h2 id="title">Pass The Biscuit Game</h2>
+        <div class="text-elements">
+            <div>
+         <p>1. Add all team names in the text boxes..</p>
+         <p>2. Select one of the Biscuits from the drop down list.</p>
+         <p>3. Start the timer and press the Biscuit button.</p>
+         <p>4. Mime the word to your teamate.</p>
+         <p>5. If your teamate guesses correctly, add a biscuit / point.</p>
+            </div>
+         </div>
+         <br>
+        <br>
+        <div class="inline-elements">
+            <div>
+                <button id="Generate1">Press to Select</button>
+           </div>
+        <div class="inline-elements1">
+            <div>
+                <label for="operation1">Select a biscuit:</label>
+                <select id="operation1">
+                    <option selected disabled></option>
+                    <option value="All">All</option> 
+                    <option value="Custard Creams">Custard Creams</option>
+                    <option value="Bourbon">Bourbon</option>
+                    <option value="Rich Tea">Rich Tea</option>
+                    <option value="Digestives">Digestives</option>
+                    <option value="Hobnobs ">Hobnobs</option>
+                    <option value="Jammie Dodgers">Jammie Dodgers</option>       
+                </select>
+            </div>
+          </div>
+        <div class="inline-elements2">
+            <div>
+                 <p id="Result1">Biscuit Selection</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="inline-elements3">
+            <div>
+                <button id="startButton">Start Timer</button>
+            </div>
+                <div id="timer">120</div>
+            <div>
+                <button id="RstTimer" onclick="resetTimer()">Reset Timer</button>
+            </div>
+        </div>
+        <br>
+        <div class="inline-elements4">
+            <div>
+                <div><button id="RstButton" onclick="resetPage()">Reset Game</button>
+            </div>
+        </div>
+        <script>
+            let timeLeft = 120;
+const timerElement = document.getElementById('timer');
+const startButton = document.getElementById('startButton');
+let countdown;
+
+startButton.addEventListener('click', () => {
+    if (countdown) {
+        clearInterval(countdown);
+    }
+    countdown = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(countdown);
+            alert('Time is up!');
+        } else {
+            timerElement.textContent = timeLeft;
+            timeLeft--;
+        }
+    }, 1000);
+});
+
+RstTimer.addEventListener('click', () => {
+    clearInterval(countdown);
+    timeLeft = 120;
+    timerElement.textContent = timeLeft;
+});
+
+function resetPage(){
+    location.reload();
+}
+        </script>
+    </body>
+</html>
+
