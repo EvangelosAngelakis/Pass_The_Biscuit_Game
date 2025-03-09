@@ -21,6 +21,10 @@
         <br>
         <div class="inline-elements">
             <div>
+                <button id="Generate1">Press to Select</button>
+           </div>
+        <div class="inline-elements1">
+            <div>
                 <label for="operation1">Select a biscuit:</label>
                 <select id="operation1">
                     <option selected disabled></option>
@@ -33,25 +37,27 @@
                     <option value="Jammie Dodgers">Jammie Dodgers</option>       
                 </select>
             </div>
-        </div>
+          </div>
         <div class="inline-elements2">
             <div>
                  <p id="Result1">Biscuit Selection</p>
             </div>
+          </div>
         </div>
+        <br>
         <div class="inline-elements3">
             <div>
-                <button id="Generate1">Press to Select</button>
-           </div>
+                <button id="startButton">Start Timer</button>
+            </div>
+                <div id="timer">120</div>
+            <div>
+                <button id="RstTimer" onclick="resetTimer()">Reset Timer</button>
+            </div>
         </div>
-        <div><button id="RstButton" onclick="resetPage()">Reset Game</button></div>
+        <br>
         <div class="inline-elements4">
             <div>
-                <div id="timer">120</div>
-                <br>
-                <button id="startButton">Start Timer</button>
-                <br>
-                <button id="RstTimer" onclick="resetTimer()">Reset Timer</button>
+                <div><button id="RstButton" onclick="resetPage()">Reset Game</button>
             </div>
         </div>
         <script src="Pass_The_Biscuit_Game.js"></script>
