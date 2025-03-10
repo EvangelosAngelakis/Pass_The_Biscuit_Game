@@ -5,7 +5,7 @@ body {
     text-align: center;
     align-items: center;
     font-size: medium;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://www.tastingtable.com/img/gallery/18-popular-british-biscuits-ranked/l-intro-1676828380.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
     background-size: 360px 620px;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,8 +22,13 @@ body {
     font-size: 90%;
     text-align: left;
     align-items: left;
-    margin-left: 8px;
+    padding-left: 5px;
     background-color: rgba(245, 245, 245, 0.2);
+    border: solid gray;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-bottom: -20px;
+    margin-top: -10px;
 }
 .inline-elements {
     display: flex;
@@ -38,6 +43,7 @@ body {
     width: 120px;
     display: flex;
     margin-left: 10px;
+    margin-top: 12px;
 }
 .inline-elements1 > div {
     display: flex;
@@ -106,6 +112,7 @@ body {
 #timer {
     font-size: x-large;
     border: solid black;
+    background-color: aliceblue;
     height: 30px;
     width: 110px;
     border-radius: 20%;
@@ -115,14 +122,15 @@ body {
 #RstTimer {
     background-color: rgb(124, 1, 1);
     color: aliceblue;
-    height: 50px;
+    height: 30px;
     width: 110px;
-    border-radius: 25%;
+    border-radius: 50%;
     border: solid black;
     font-weight: bold;
-    margin-top: 8px;
+    margin-top: 15px;
 }
 #RstButton {
-
+    margin-top: 25px;
+    font-size: xx-small;
 }
 

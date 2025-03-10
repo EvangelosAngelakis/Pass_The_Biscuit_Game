@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            body {
+body {
     width: 350px;
     height: 610px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: medium;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://www.tastingtable.com/img/gallery/18-popular-british-biscuits-ranked/l-intro-1676828380.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
     background-size: 360px 620px;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,8 +28,13 @@
     font-size: 90%;
     text-align: left;
     align-items: left;
-    margin-left: 8px;
+    padding-left: 5px;
     background-color: rgba(245, 245, 245, 0.2);
+    border: solid gray;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-bottom: -20px;
+    margin-top: -10px;
 }
 .inline-elements {
     display: flex;
@@ -44,6 +49,7 @@
     width: 120px;
     display: flex;
     margin-left: 10px;
+    margin-top: 12px;
 }
 .inline-elements1 > div {
     display: flex;
@@ -112,6 +118,7 @@
 #timer {
     font-size: x-large;
     border: solid black;
+    background-color: aliceblue;
     height: 30px;
     width: 110px;
     border-radius: 20%;
@@ -121,15 +128,16 @@
 #RstTimer {
     background-color: rgb(124, 1, 1);
     color: aliceblue;
-    height: 50px;
+    height: 30px;
     width: 110px;
-    border-radius: 25%;
+    border-radius: 50%;
     border: solid black;
     font-weight: bold;
-    margin-top: 8px;
+    margin-top: 15px;
 }
 #RstButton {
-
+    margin-top: 25px;
+    font-size: xx-small;
 }
         </style>
         <title>Drawing Idea Generator</title>
@@ -175,7 +183,7 @@
         <br>
         <div class="inline-elements3">
             <div>
-                <button id="startButton">Start Timer</button>
+                <button id="startButton">Start / Pause Timer</button>
             </div>
                 <div id="timer">120</div>
             <div>
@@ -189,30 +197,37 @@
             </div>
         </div>
         <script>
-            let timeLeft = 120;
+let timeLeft = 120;
 const timerElement = document.getElementById('timer');
 const startButton = document.getElementById('startButton');
+const RstTimer = document.getElementById('RstTimer'); 
 let countdown;
+let isRunning = false; 
 
 startButton.addEventListener('click', () => {
-    if (countdown) {
+    if (isRunning) {
         clearInterval(countdown);
+        isRunning = false;
+    } else {
+        countdown = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                alert('Time is up!');
+                isRunning = false;
+            } else {
+                timerElement.textContent = timeLeft;
+                timeLeft--;
+            }
+        }, 1000);
+        isRunning = true;
     }
-    countdown = setInterval(() => {
-        if (timeLeft <= 0) {
-            clearInterval(countdown);
-            alert('Time is up!');
-        } else {
-            timerElement.textContent = timeLeft;
-            timeLeft--;
-        }
-    }, 1000);
 });
 
 RstTimer.addEventListener('click', () => {
     clearInterval(countdown);
     timeLeft = 120;
     timerElement.textContent = timeLeft;
+    isRunning = false;
 });
 
 function resetPage(){
