@@ -29,7 +29,7 @@ document.getElementById('Generate').addEventListener('click', function() {
     }
 });
 
-let timeLeft = 120;
+let timeLeft = 59;
 const timerElement = document.getElementById('timer');
 const startButton = document.getElementById('startButton');
 const RstTimer = document.getElementById('RstTimer'); 
@@ -57,7 +57,7 @@ startButton.addEventListener('click', () => {
 
 RstTimer.addEventListener('click', () => {
     clearInterval(countdown);
-    timeLeft = 120;
+    timeLeft = 60;
     timerElement.textContent = timeLeft;
     isRunning = false;
 });
