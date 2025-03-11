@@ -73,6 +73,7 @@ body {
     margin-left: 5px;
     width: 355px;
     gap: 14px;
+    margin-bottom: -10px;
 }
 .inline-elements3 > div {
     display: flex;
@@ -88,7 +89,7 @@ body {
     display: flex;
     flex-direction: row;
 }
-#Generate1 {
+#Generate {
     background-color: green;
     color: wheat;
     height: 70px;
@@ -96,15 +97,17 @@ body {
     border: solid black;
     font-weight: bold;
 }
-#Result1 {
+#Result {
     border: solid black;
     width: 106px;
-    height: 35px;
+    height: 50px;
     font-weight: bold;
     background-color: bisque;
     border-radius: 5px;
     margin-right: 15px;
     word-wrap: break-word;
+    margin-top: 2px;
+    padding-top: 12px;
 }
 #startButton{
     background-color: green;
@@ -114,6 +117,7 @@ body {
     border-radius: 50%;
     border: solid black;
     font-weight: bold;
+    margin-top: -15px;
 }
 #timer {
     font-size: x-large;
@@ -123,7 +127,7 @@ body {
     width: 110px;
     border-radius: 20%;
     font-weight: bold;
-    margin-top: 15px;
+
 }
 #RstTimer {
     background-color: rgb(124, 1, 1);
@@ -133,10 +137,9 @@ body {
     border-radius: 50%;
     border: solid black;
     font-weight: bold;
-    margin-top: 15px;
 }
 #RstButton {
-    margin-top: 25px;
+    margin-top: 30px;
     font-size: xx-small;
 }
         </style>
@@ -157,26 +160,26 @@ body {
         <br>
         <div class="inline-elements">
             <div>
-                <button id="Generate1">Press to Select</button>
+                <button id="Generate">Press to Select</button>
            </div>
         <div class="inline-elements1">
             <div>
-                <label for="operation1">Select a biscuit:</label>
-                <select id="operation1">
+                <label for="operation">Select a biscuit:</label>
+                <select id="operation">
                     <option selected disabled></option>
                     <option value="All">All</option> 
-                    <option value="Custard Creams">Custard Creams</option>
+                    <option value="CustardCreams">Custard Creams</option>
                     <option value="Bourbon">Bourbon</option>
-                    <option value="Rich Tea">Rich Tea</option>
+                    <option value="RichTea">Rich Tea</option>
                     <option value="Digestives">Digestives</option>
-                    <option value="Hobnobs ">Hobnobs</option>
-                    <option value="Jammie Dodgers">Jammie Dodgers</option>       
+                    <option value="Hobnobs">Hobnobs</option>
+                    <option value="JammieDodgers">Jammie Dodgers</option>       
                 </select>
             </div>
           </div>
         <div class="inline-elements2">
             <div>
-                 <p id="Result1">Biscuit Selection</p>
+                 <p id="Result">Biscuit Selection</p>
             </div>
           </div>
         </div>
@@ -197,6 +200,37 @@ body {
             </div>
         </div>
         <script>
+const selectedOptions = {
+    CustardCreams: ["Surfing", "Gymnastics", "Spin", "Tennis", "Sprint", "Bend", "Painting", "Jump", "Walk", "Cycling", "Skip", "Crawl", "Football", "Cleaning", "Stretch"],
+    Bourbon: ["Slide", "Exercising", "Jog", "Meditating", "Basketball", "Martial Arts", "Swim", "Writing", "Climb", "Volleyball", "Drinking", "Shopping", "Cricket", "Dancing", "Skateboarding"],
+    RichTea: ["Cooking", "Swimming", "Baseball", "Reading", "Gardening", "Skiing", "Eating", "Golf", "Sleeping", "Roll", "Dive", "Driving"],
+    Digestives: ["Exercising", "Cooking", "Baseball", "Jump", "Bend", "Eating", "Cricket", "Cycling", "Skateboarding", "Basketball", "Shopping", "Football", "Surfing", "Sprint", "Martial Arts"],
+    Hobnobs: ["Cleaning", "Painting", "Sleeping", "Walk", "Crawl", "Gardening", "Writing", "Dive", "Stretch", "Volleyball", "Skip", "Slide", "Tennis", "Gymnastics", "Swimming"],
+    JammieDodgers: ["Dancing", "Swim", "Reading", "Meditating", "Skiing", "Climb", "Drinking", "Golf", "Spin", "Roll", "Jog"]
+};
+
+let currentIndex = 0;
+
+document.getElementById('Generate').addEventListener('click', function() {
+    const category = document.getElementById('operation').value;
+    const Result = document.getElementById('Result');
+    let items;
+
+    if (category === "All") {
+        items = [].concat(...Object.values(selectedOptions));
+        const randomIndex = Math.floor(Math.random() * items.length);
+        Result.innerText = items[randomIndex];
+    } else {
+        items = selectedOptions[category];
+        if (Result && items && items.length > 0) {
+            Result.innerText = items[currentIndex];
+            currentIndex = (currentIndex + 3) % items.length;
+        } else {
+            console.error('Element with id "Result" or selected category not found.');
+        }
+    }
+});
+
 let timeLeft = 120;
 const timerElement = document.getElementById('timer');
 const startButton = document.getElementById('startButton');
