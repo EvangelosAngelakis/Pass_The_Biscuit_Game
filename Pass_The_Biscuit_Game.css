@@ -1,12 +1,12 @@
 body {
     width: 350px;
-    height: 610px;
+    height: 680px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: medium;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
-    background-size: 360px 620px;
+    background-size: 360px 690px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
@@ -58,10 +58,6 @@ body {
     display: flex;
     margin-left: 10px;
 }
-.inline-elements2 > div {
-    display: flex;
-    flex-direction: column;
-}
 .inline-elements3 {
     display: flex;
     margin-left: 5px;
@@ -69,19 +65,66 @@ body {
     gap: 14px;
     margin-bottom: -10px;
 }
-.inline-elements3 > div {
-    display: flex;
-    flex-direction: column;
-}
 .inline-elements4 {
     display: flex;
     width: 150px;
     margin-top: 160px;
     margin-left: 135px;
 }
-.inline-elements4 > div {
+.inline-elements5 {
     display: flex;
-    flex-direction: row;
+    width: 150px;
+    height: 20px;
+    margin-top: -150px;
+    margin-left: -190px;
+}
+.inline-elements6 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-top: -120px;
+    margin-left: -150px;
+}
+.inline-elements7 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-top: -90px;
+    margin-left: -150px;
+}
+.inline-elements8 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-top: -60px;
+    margin-left: -150px;
+}
+.inline-elements9 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-top: -30px;
+    margin-left: -150px;
+}
+.inline-elements10 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-left: -150px;
+}
+.inline-elements11 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-top: 30px;
+    margin-left: -150px;
+}
+.inline-elements12 {
+    display: flex;
+    width: 150px;
+    height: 20px;
+    margin-top: 60px;
+    margin-left: -150px;
 }
 #Generate {
     background-color: green;
@@ -121,7 +164,6 @@ body {
     width: 110px;
     border-radius: 20%;
     font-weight: bold;
-
 }
 #RstTimer {
     background-color: rgb(124, 1, 1);
@@ -133,7 +175,7 @@ body {
     font-weight: bold;
 }
 #RstButton {
-    margin-top: 30px;
+    margin-top: 100px;
     font-size: xx-small;
 }
 
