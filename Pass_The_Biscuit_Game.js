@@ -1,11 +1,13 @@
 const selectedOptions = {
-    CustardCreams: ["Surfing", "Gymnastics", "Spin", "Tennis", "Sprint", "Bend", "Painting", "Jump", "Walk", "Cycling", "Skip", "Crawl", "Football", "Cleaning", "Stretch"],
-    Bourbon: ["Slide", "Exercising", "Jog", "Meditating", "Basketball", "Martial Arts", "Swim", "Writing", "Climb", "Volleyball", "Drinking", "Shopping", "Cricket", "Dancing", "Skateboarding"],
-    RichTea: ["Cooking", "Swimming", "Baseball", "Reading", "Gardening", "Skiing", "Eating", "Golf", "Sleeping", "Roll", "Dive", "Driving"],
-    Digestives: ["Exercising", "Cooking", "Baseball", "Jump", "Bend", "Eating", "Cricket", "Cycling", "Skateboarding", "Basketball", "Shopping", "Football", "Surfing", "Sprint", "Martial Arts"],
-    Hobnobs: ["Cleaning", "Painting", "Sleeping", "Walk", "Crawl", "Gardening", "Writing", "Dive", "Stretch", "Volleyball", "Skip", "Slide", "Tennis", "Gymnastics", "Swimming"],
-    JammieDodgers: ["Dancing", "Swim", "Reading", "Meditating", "Skiing", "Climb", "Drinking", "Golf", "Spin", "Roll", "Jog"]
+    CustardCreams: ["Cycling", "Crawl", "Bend", "Gymnastics", "Football", "Skip", "Sprint", "Painting", "Cleaning", "Surfing", "Jump", "Walk", "Tennis", "Spin", "Stretch"],
+    Bourbon: ["Meditating", "Writing", "Martial Arts", "Slide", "Cricket", "Dancing", "Basketball", "Shopping", "Exercising", "Drinking", "Climb", "Skateboarding", "Volleyball", "Jog", "Swim"],
+    RichTea: ["Cooking", "Eating", "Skiing", "Reading", "Driving", "Swimming", "Roll", "Sleeping", "Baseball", "Gardening", "Golf", "Dive", "Cow", "Duck", "Chicken", "Turkey", "Bee"],
+    Digestives: ["Cycling", "Sprint", "Football", "Eating", "Exercising", "Skateboarding", "Shopping", "Cooking", "Bend", "Surfing", "Martial Arts", "Cricket", "Baseball", "Jump", "Basketball"],
+    Hobnobs: ["Gymnastics", "Skip", "Cleaning", "Sleeping", "Walk", "Crawl", "Slide", "Dive", "Gardening", "Tennis", "Writing", "Swimming", "Stretch", "Painting", "Volleyball"],
+    JammieDodgers: ["Dancing", "Swim", "Reading", "Meditating", "Skiing", "Climb", "Drinking", "Golf", "Spin", "Roll", "Lion", "Elephant", "Kangaroo", "Penguin", "Wolf", "Bear", "Frog", "Sheep"]
 };
+
+[, ]
 
 let currentIndex = 0;
 
