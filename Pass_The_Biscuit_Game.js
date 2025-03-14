@@ -7,8 +7,6 @@ const selectedOptions = {
     JammieDodgers: ["Dancing", "Swim", "Reading", "Meditating", "Skiing", "Climb", "Drinking", "Golf", "Spin", "Roll", "Lion", "Elephant", "Kangaroo", "Penguin", "Wolf", "Bear", "Frog", "Sheep"]
 };
 
-[, ]
-
 let currentIndex = 0;
 
 document.getElementById('Generate').addEventListener('click', function() {
@@ -59,10 +57,20 @@ startButton.addEventListener('click', () => {
 
 RstTimer.addEventListener('click', () => {
     clearInterval(countdown);
-    timeLeft = 60;
+    timeLeft = 59;
     timerElement.textContent = timeLeft;
     isRunning = false;
 });
+
+function increment(counterId) {
+    const counter = document.getElementById(counterId);
+    counter.textContent = parseInt(counter.textContent) + 1;
+}
+
+function decrement(counterId) {
+    const counter = document.getElementById(counterId);
+    counter.textContent = parseInt(counter.textContent) - 1;
+}
 
 function resetPage(){
     location.reload();

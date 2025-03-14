@@ -158,7 +158,7 @@ body {
     border-radius: 5px;
     background-color: green;
 }
-#updateParagraph1, #updateParagraph2, #updateParagraph3, #updateParagraph4, #updateParagraph5, #updateParagraph6, #updateParagraph7, #updateParagraph8 {
+#counter1, #counter2, #counter3, #counter4, #counter5, #counter6, #counter7, #counter8 {
     border: solid black;
     text-align: center;
     align-items: center;
@@ -273,67 +273,67 @@ body {
         <br>
         <div class="inline-elements4">
             <form>
-                <input type="text1" class="textbox" name="textbox" placeholder="Enter Team 1 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 1 name">
             </form>
-            <p id="updateParagraph1">SCORE</p>
-            <button id="buttonMinus1" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus1" onclick="resetParagraph()">+</button>
+            <p id="counter1">SCORE</p>
+            <button id="buttonMinus1" onclick="increment('counter1')">-</button>
+            <button id="buttonPlus1" onclick="decrement('counter1')">+</button>
         </div>
         <div class="inline-elements5">
             <form>
-                <input type="text2" class="textbox" name="textbox" placeholder="Enter Team 2 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 2 name">
             </form>
-            <p id="updateParagraph2">SCORE</p>
-            <button id="buttonMinus2" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus2" onclick="resetParagraph()">+</button>
+            <p id="counter2">SCORE</p>
+            <button id="buttonMinus2" onclick="increment('counter2')">-</button>
+            <button id="buttonPlus2" onclick="decrement('counter2')">+</button>
         </div>
         <div class="inline-elements6">
             <form>
-                <input type="text3" class="textbox" name="textbox" placeholder="Enter Team 3 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 3 name">
             </form>
-            <p id="updateParagraph3">SCORE</p>
-            <button id="buttonMinus3" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus3" onclick="resetParagraph()">+</button>
+            <p id="counter3">SCORE</p>
+            <button id="buttonMinus3" onclick="increment('counter3')">-</button>
+            <button id="buttonPlus3" onclick="decrement('counter3')">+</button>
         </div>
         <div class="inline-elements7">
             <form>
-                <input type="text4" class="textbox" name="textbox" placeholder="Enter Team 4 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 4 name">
             </form>
-            <p id="updateParagraph4">SCORE</p>
-            <button id="buttonMinus4" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus4" onclick="resetParagraph()">+</button>
+            <p id="counter4">SCORE</p>
+            <button id="buttonMinus4" onclick="increment('counter4')">-</button>
+            <button id="buttonPlus4" onclick="decrement('counter4')">+</button>
         </div>
         <div class="inline-elements8">
             <form>
-                <input type="text5" class="textbox" name="textbox" placeholder="Enter Team 5 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 5 name">
             </form>
-            <p id="updateParagraph5">SCORE</p>
-            <button id="buttonMinus5" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus5" onclick="resetParagraph()">+</button>
+            <p id="counter5">SCORE</p>
+            <button id="buttonMinus5" onclick="increment('counter5')">-</button>
+            <button id="buttonPlus5" onclick="decrement('counter5')">+</button>
         </div>
         <div class="inline-elements9">
             <form>
-                <input type="text6" class="textbox" name="textbox" placeholder="Enter Team 6 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 6 name">
             </form>
-            <p id="updateParagraph6">SCORE</p>
-            <button id="buttonMinus6" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus6" onclick="resetParagraph()">+</button>
+            <p id="counter6">SCORE</p>
+            <button id="buttonMinus6" onclick="increment('counter6')">-</button>
+            <button id="buttonPlus6" onclick="decrement('counter6')">+</button>
         </div>
         <div class="inline-elements10">
             <form>
-                <input type="text7" class="textbox" name="textbox" placeholder="Enter Team 7 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 7 name">
             </form>
-            <p id="updateParagraph7">SCORE</p>
-            <button id="buttonMinus7" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus7" onclick="resetParagraph()">+</button>
+            <p id="counter7">SCORE</p>
+            <button id="buttonMinus7" onclick="increment('counter7')">-</button>
+            <button id="buttonPlus7" onclick="decrement('counter7')">+</button>
         </div>
         <div class="inline-elements11">
             <form>
-                <input type="text8" class="textbox" name="textbox" placeholder="Enter Team 8 name">
+                <input type="text" class="textbox" name="textbox" placeholder="Enter Team 8 name">
             </form>
-            <p id="updateParagraph8">SCORE</p>
-            <button id="buttonMinus8" onclick="updateParagraph()">-</button>
-            <button id="buttonPlus8" onclick="resetParagraph()">+</button>
+            <p id="counter8">SCORE</p>
+            <button id="buttonMinus8" onclick="increment('counter8')">-</button>
+            <button id="buttonPlus8" onclick="decrement('counter8')">+</button>
         </div>
         <div class="inline-elements50">
             <div>
@@ -342,12 +342,12 @@ body {
         </div>
         <script>
 const selectedOptions = {
-    CustardCreams: ["Surfing", "Gymnastics", "Spin", "Tennis", "Sprint", "Bend", "Painting", "Jump", "Walk", "Cycling", "Skip", "Crawl", "Football", "Cleaning", "Stretch"],
-    Bourbon: ["Slide", "Exercising", "Jog", "Meditating", "Basketball", "Martial Arts", "Swim", "Writing", "Climb", "Volleyball", "Drinking", "Shopping", "Cricket", "Dancing", "Skateboarding"],
-    RichTea: ["Cooking", "Swimming", "Baseball", "Reading", "Gardening", "Skiing", "Eating", "Golf", "Sleeping", "Roll", "Dive", "Driving"],
-    Digestives: ["Exercising", "Cooking", "Baseball", "Jump", "Bend", "Eating", "Cricket", "Cycling", "Skateboarding", "Basketball", "Shopping", "Football", "Surfing", "Sprint", "Martial Arts"],
-    Hobnobs: ["Cleaning", "Painting", "Sleeping", "Walk", "Crawl", "Gardening", "Writing", "Dive", "Stretch", "Volleyball", "Skip", "Slide", "Tennis", "Gymnastics", "Swimming"],
-    JammieDodgers: ["Dancing", "Swim", "Reading", "Meditating", "Skiing", "Climb", "Drinking", "Golf", "Spin", "Roll", "Jog"]
+    CustardCreams: ["Cycling", "Crawl", "Bend", "Gymnastics", "Football", "Skip", "Sprint", "Painting", "Cleaning", "Surfing", "Jump", "Walk", "Tennis", "Spin", "Stretch"],
+    Bourbon: ["Meditating", "Writing", "Martial Arts", "Slide", "Cricket", "Dancing", "Basketball", "Shopping", "Exercising", "Drinking", "Climb", "Skateboarding", "Volleyball", "Jog", "Swim"],
+    RichTea: ["Cooking", "Eating", "Skiing", "Reading", "Driving", "Swimming", "Roll", "Sleeping", "Baseball", "Gardening", "Golf", "Dive", "Cow", "Duck", "Chicken", "Turkey", "Bee"],
+    Digestives: ["Cycling", "Sprint", "Football", "Eating", "Exercising", "Skateboarding", "Shopping", "Cooking", "Bend", "Surfing", "Martial Arts", "Cricket", "Baseball", "Jump", "Basketball"],
+    Hobnobs: ["Gymnastics", "Skip", "Cleaning", "Sleeping", "Walk", "Crawl", "Slide", "Dive", "Gardening", "Tennis", "Writing", "Swimming", "Stretch", "Painting", "Volleyball"],
+    JammieDodgers: ["Dancing", "Swim", "Reading", "Meditating", "Skiing", "Climb", "Drinking", "Golf", "Spin", "Roll", "Lion", "Elephant", "Kangaroo", "Penguin", "Wolf", "Bear", "Frog", "Sheep"]
 };
 
 let currentIndex = 0;
@@ -372,7 +372,7 @@ document.getElementById('Generate').addEventListener('click', function() {
     }
 });
 
-let timeLeft = 60;
+let timeLeft = 59;
 const timerElement = document.getElementById('timer');
 const startButton = document.getElementById('startButton');
 const RstTimer = document.getElementById('RstTimer'); 
@@ -400,10 +400,20 @@ startButton.addEventListener('click', () => {
 
 RstTimer.addEventListener('click', () => {
     clearInterval(countdown);
-    timeLeft = 60;
+    timeLeft = 59;
     timerElement.textContent = timeLeft;
     isRunning = false;
 });
+
+function increment(counterId) {
+    const counter = document.getElementById(counterId);
+    counter.textContent = parseInt(counter.textContent) + 1;
+}
+
+function decrement(counterId) {
+    const counter = document.getElementById(counterId);
+    counter.textContent = parseInt(counter.textContent) - 1;
+}
 
 function resetPage(){
     location.reload();
