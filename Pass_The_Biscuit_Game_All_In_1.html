@@ -72,7 +72,6 @@ body {
 }
 .inline-elements4 {
     display: flex;
-    width: 150px;
     margin-top: 10px;
     gap: 20px;
 }
@@ -145,28 +144,31 @@ body {
     margin-left: 145px;
 }
 #buttonMinus1, #buttonMinus2, #buttonMinus3, #buttonMinus4, #buttonMinus5, #buttonMinus6, #buttonMinus7, #buttonMinus8 {
-    width: 1000px;
     height: 20px;
     border: solid black;
     border-radius: 5px;
     background-color: red;
 }
 #buttonPlus1, #buttonPlus2, #buttonPlus3, #buttonPlus4, #buttonPlus5, #buttonPlus6, #buttonPlus7, #buttonPlus8 {
-    width: 150px;
     height: 20px;
     border: solid black;
     border-radius: 5px;
     background-color: green;
 }
 #counter1, #counter2, #counter3, #counter4, #counter5, #counter6, #counter7, #counter8 {
+    display: flex;
+    height: 20px;
+    width: 80px;
     border: solid black;
     text-align: center;
     align-items: center;
+    justify-content: center;
     border-radius: 5px;
-    width: 150px;
-    height: 20px;
     margin-top: -2px;
-    margin-left: 0px;
+    margin-left: -2px;
+}
+.counter2 {
+    width: 80px;
 }
 #Generate {
     background-color: green;
@@ -219,6 +221,8 @@ body {
 #RstButton {
     font-size: xx-small;
 }
+
+
         </style>
         <title>Drawing Idea Generator</title>
     </head>
@@ -276,64 +280,64 @@ body {
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 1 name">
             </form>
             <p id="counter1">SCORE</p>
-            <button id="buttonMinus1" onclick="increment('counter1')">-</button>
-            <button id="buttonPlus1" onclick="decrement('counter1')">+</button>
+            <button id="buttonMinus1" onclick="subtractPoint('counter1')">-</button>
+            <button id="buttonPlus1" onclick="addPoint('counter1')">+</button>
         </div>
         <div class="inline-elements5">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 2 name">
             </form>
-            <p id="counter2">SCORE</p>
-            <button id="buttonMinus2" onclick="increment('counter2')">-</button>
-            <button id="buttonPlus2" onclick="decrement('counter2')">+</button>
+            <p class="counter2" id="counter2" >SCORE</p>
+            <button id="buttonMinus2" onclick="subtractPoint('counter2')">-</button>
+            <button id="buttonPlus2" onclick="addPoint('counter2')">+</button>
         </div>
         <div class="inline-elements6">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 3 name">
             </form>
             <p id="counter3">SCORE</p>
-            <button id="buttonMinus3" onclick="increment('counter3')">-</button>
-            <button id="buttonPlus3" onclick="decrement('counter3')">+</button>
+            <button id="buttonMinus3" onclick="subtractPoint('counter3')">-</button>
+            <button id="buttonPlus3" onclick="addPoint('counter3')">+</button>
         </div>
         <div class="inline-elements7">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 4 name">
             </form>
             <p id="counter4">SCORE</p>
-            <button id="buttonMinus4" onclick="increment('counter4')">-</button>
-            <button id="buttonPlus4" onclick="decrement('counter4')">+</button>
+            <button id="buttonMinus4" onclick="subtractPoint('counter4')">-</button>
+            <button id="buttonPlus4" onclick="addPoint('counter4')">+</button>
         </div>
         <div class="inline-elements8">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 5 name">
             </form>
             <p id="counter5">SCORE</p>
-            <button id="buttonMinus5" onclick="increment('counter5')">-</button>
-            <button id="buttonPlus5" onclick="decrement('counter5')">+</button>
+            <button id="buttonMinus5" onclick="subtractPoint('counter5')">-</button>
+            <button id="buttonPlus5" onclick="addPoint('counter5')">+</button>
         </div>
         <div class="inline-elements9">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 6 name">
             </form>
             <p id="counter6">SCORE</p>
-            <button id="buttonMinus6" onclick="increment('counter6')">-</button>
-            <button id="buttonPlus6" onclick="decrement('counter6')">+</button>
+            <button id="buttonMinus6" onclick="subtractPoint('counter6')">-</button>
+            <button id="buttonPlus6" onclick="addPoint('counter6')">+</button>
         </div>
         <div class="inline-elements10">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 7 name">
             </form>
             <p id="counter7">SCORE</p>
-            <button id="buttonMinus7" onclick="increment('counter7')">-</button>
-            <button id="buttonPlus7" onclick="decrement('counter7')">+</button>
+            <button id="buttonMinus7" onclick="subtractPoint('counter7')">-</button>
+            <button id="buttonPlus7" onclick="addPoint('counter7')">+</button>
         </div>
         <div class="inline-elements11">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 8 name">
             </form>
             <p id="counter8">SCORE</p>
-            <button id="buttonMinus8" onclick="increment('counter8')">-</button>
-            <button id="buttonPlus8" onclick="decrement('counter8')">+</button>
+            <button id="buttonMinus8" onclick="subtractPoint('counter8')">-</button>
+            <button id="buttonPlus8" onclick="addPoint('counter8')">+</button>
         </div>
         <div class="inline-elements50">
             <div>
@@ -405,14 +409,27 @@ RstTimer.addEventListener('click', () => {
     isRunning = false;
 });
 
-function increment(counterId) {
-    const counter = document.getElementById(counterId);
-    counter.textContent = parseInt(counter.textContent) + 1;
+let counts = {
+    counter1: 0,
+    counter2: 0,
+    counter3: 0,
+    counter4: 0,
+    counter5: 0,
+    counter6: 0,
+    counter7: 0,
+    counter8: 0
+};
+
+function addPoint(counterId) {
+    counts[counterId]++;
+    document.getElementById(counterId).innerText = counts[counterId];
 }
 
-function decrement(counterId) {
-    const counter = document.getElementById(counterId);
-    counter.textContent = parseInt(counter.textContent) - 1;
+function subtractPoint(counterId) {
+    if (counts[counterId] > 0) {
+        counts[counterId]--;
+        document.getElementById(counterId).innerText = counts[counterId];
+    }
 }
 
 function resetPage(){

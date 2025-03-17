@@ -62,14 +62,27 @@ RstTimer.addEventListener('click', () => {
     isRunning = false;
 });
 
-function increment(counterId) {
-    const counter = document.getElementById(counterId);
-    counter.textContent = parseInt(counter.textContent) + 1;
+let counts = {
+    counter1: 0,
+    counter2: 0,
+    counter3: 0,
+    counter4: 0,
+    counter5: 0,
+    counter6: 0,
+    counter7: 0,
+    counter8: 0
+};
+
+function addPoint(counterId) {
+    counts[counterId]++;
+    document.getElementById(counterId).innerText = counts[counterId];
 }
 
-function decrement(counterId) {
-    const counter = document.getElementById(counterId);
-    counter.textContent = parseInt(counter.textContent) - 1;
+function subtractPoint(counterId) {
+    if (counts[counterId] > 0) {
+        counts[counterId]--;
+        document.getElementById(counterId).innerText = counts[counterId];
+    }
 }
 
 function resetPage(){
