@@ -71,52 +71,45 @@ body {
 }
 .inline-elements5 {
     display: flex;
-    width: 150px;
-    height: 20px;
-    margin-top: -6px;
+    margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements6 {
     display: flex;
-    width: 150px;
-    height: 20px;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements7 {
     display: flex;
-    width: 150px;
-    height: 20px;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements8 {
     display: flex;
-    width: 150px;
-    height: 20px;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements9 {
     display: flex;
-    width: 150px;
-    height: 20px;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements10 {
     display: flex;
-    width: 150px;
-    height: 20px;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements11 {
     display: flex;
-    width: 150px;
-    height: 20px;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements12 {
     display: flex;
@@ -131,10 +124,12 @@ body {
 }
 .inline-elements50 {
     display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    align-items: center;
     width: 150px;
     height: 20px;
-    margin-top: 20px;
+    margin-top: -15px;
     margin-left: 145px;
 }
 #buttonMinus1, #buttonMinus2, #buttonMinus3, #buttonMinus4, #buttonMinus5, #buttonMinus6, #buttonMinus7, #buttonMinus8 {
@@ -161,9 +156,7 @@ body {
     margin-top: -2px;
     margin-left: -2px;
 }
-.counter2 {
-    width: 80px;
-}
+
 #Generate {
     background-color: green;
     color: wheat;
@@ -213,6 +206,10 @@ body {
     font-weight: bold;
 }
 #RstButton {
+    display: flex;
     font-size: xx-small;
+}
+.RstButton {
+    position: fixed;
 }
 
