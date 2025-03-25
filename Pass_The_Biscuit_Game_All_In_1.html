@@ -46,34 +46,28 @@ body {
     flex-direction: column;
 }
 .inline-elements1 {
-    width: 120px;
-    display: flex;
-    margin-left: 10px;
-    margin-top: 12px;
-}
-.inline-elements1 > div {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(245, 245, 245, 0.2);
-}
-.inline-elements1 label {
-    margin-bottom: 5px; 
-    background-color: whitesmoke 25%;
-}
-.inline-elements2 {
-    margin-left: 10px;
-}
-.inline-elements3 {
     display: flex;
     margin-left: 5px;
     width: 355px;
     gap: 14px;
     margin-bottom: -15px;
 }
+.inline-elements2 {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+}
+.inline-elements3 {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+    margin-top: -8px;
+}
 .inline-elements4 {
     display: flex;
     margin-top: 10px;
     gap: 20px;
+    margin-top: -8px;
 }
 .inline-elements5 {
     display: flex;
@@ -106,36 +100,9 @@ body {
     margin-top: -8px;
 }
 .inline-elements10 {
-    display: flex;
-    margin-top: 10px;
-    gap: 20px;
-    margin-top: -8px;
-}
-.inline-elements11 {
-    display: flex;
-    margin-top: 10px;
-    gap: 20px;
-    margin-top: -8px;
-}
-.inline-elements12 {
-    display: flex;
-    width: 100px;
-    height: 15px;
-    border: solid black;
     text-align: center;
     align-items: center;
-    border-radius: 5px;
-    margin-top: -230px;
-    margin-left: 235px;
-}
-.inline-elements50 {
-    display: flex;
-    position: relative;
-    text-align: center;
-    align-items: center;
-    width: 150px;
-    height: 20px;
-    margin-top: -15px;
+    margin-top: -5px;
     margin-left: 145px;
 }
 #buttonMinus1, #buttonMinus2, #buttonMinus3, #buttonMinus4, #buttonMinus5, #buttonMinus6, #buttonMinus7, #buttonMinus8 {
@@ -162,11 +129,16 @@ body {
     margin-top: -2px;
     margin-left: -2px;
 }
-
+#operation1 {
+    width: 120px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
 #Generate {
     background-color: green;
     color: wheat;
     height: 70px;
+    width: 90px;
     border-radius: 50%;
     border: solid black;
     font-weight: bold;
@@ -179,6 +151,7 @@ body {
     background-color: bisque;
     border-radius: 5px;
     margin-right: 15px;
+    margin: 10px;
     word-wrap: break-word;
     margin-top: 2px;
     padding-top: 12px;
@@ -236,11 +209,7 @@ body {
         <br>
         <div class="inline-elements">
             <div>
-                <button id="Generate">Press to Select</button>
-           </div>
-        <div class="inline-elements1">
-            <div>
-                <label for="operation">Select a biscuit:</label>
+                <label id="operation1" for="operation">Select a biscuit:</label>
                 <select id="operation">
                     <option selected disabled></option>
                     <option value="All">All</option> 
@@ -251,26 +220,26 @@ body {
                     <option value="Hobnobs">Hobnobs</option>
                     <option value="JammieDodgers">Jammie Dodgers</option>       
                 </select>
-            </div>
-          </div>
-        <div class="inline-elements2">
+            </div> 
             <div>
-                 <p id="Result">Biscuit Selection</p>
+                <p id="Result">Biscuit Selection</p>
             </div>
-          </div>
+            <div>
+                <button id="Generate">Press to Select</button>
+           </div>
         </div>
         <br>
-        <div class="inline-elements3">
-            <div>
-                <button id="startButton">Start / Pause Timer</button>
-            </div>
-                <div id="timer">60</div>
+        <div class="inline-elements1">
             <div>
                 <button id="RstTimer" onclick="resetTimer()">Reset Timer</button>
             </div>
+                <div id="timer">60</div>
+            <div>
+                <button id="startButton">Start / Pause Timer</button>
+            </div>
         </div>
         <br>
-        <div class="inline-elements4">
+        <div class="inline-elements2">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 1 name">
             </form>
@@ -278,7 +247,7 @@ body {
             <button id="buttonMinus1" onclick="subtractPoint('counter1')">-</button>
             <button id="buttonPlus1" onclick="addPoint('counter1')">+</button>
         </div>
-        <div class="inline-elements5">
+        <div class="inline-elements3">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 2 name">
             </form>
@@ -286,7 +255,7 @@ body {
             <button id="buttonMinus2" onclick="subtractPoint('counter2')">-</button>
             <button id="buttonPlus2" onclick="addPoint('counter2')">+</button>
         </div>
-        <div class="inline-elements6">
+        <div class="inline-elements4">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 3 name">
             </form>
@@ -294,7 +263,7 @@ body {
             <button id="buttonMinus3" onclick="subtractPoint('counter3')">-</button>
             <button id="buttonPlus3" onclick="addPoint('counter3')">+</button>
         </div>
-        <div class="inline-elements7">
+        <div class="inline-elements5">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 4 name">
             </form>
@@ -302,7 +271,7 @@ body {
             <button id="buttonMinus4" onclick="subtractPoint('counter4')">-</button>
             <button id="buttonPlus4" onclick="addPoint('counter4')">+</button>
         </div>
-        <div class="inline-elements8">
+        <div class="inline-elements6">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 5 name">
             </form>
@@ -310,7 +279,7 @@ body {
             <button id="buttonMinus5" onclick="subtractPoint('counter5')">-</button>
             <button id="buttonPlus5" onclick="addPoint('counter5')">+</button>
         </div>
-        <div class="inline-elements9">
+        <div class="inline-elements7">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 6 name">
             </form>
@@ -318,7 +287,7 @@ body {
             <button id="buttonMinus6" onclick="subtractPoint('counter6')">-</button>
             <button id="buttonPlus6" onclick="addPoint('counter6')">+</button>
         </div>
-        <div class="inline-elements10">
+        <div class="inline-elements8">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 7 name">
             </form>
@@ -326,7 +295,7 @@ body {
             <button id="buttonMinus7" onclick="subtractPoint('counter7')">-</button>
             <button id="buttonPlus7" onclick="addPoint('counter7')">+</button>
         </div>
-        <div class="inline-elements11">
+        <div class="inline-elements9">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 8 name">
             </form>
@@ -334,7 +303,7 @@ body {
             <button id="buttonMinus8" onclick="subtractPoint('counter8')">-</button>
             <button id="buttonPlus8" onclick="addPoint('counter8')">+</button>
         </div>
-        <div class="inline-elements50">
+        <div class="inline-elements10">
             <div>
                 <button class="RstButton" id="RstButton" onclick="resetPage()">Reset Game</button>
             </div>
@@ -399,7 +368,7 @@ startButton.addEventListener('click', () => {
 
 RstTimer.addEventListener('click', () => {
     clearInterval(countdown);
-    timeLeft = 59;
+    timeLeft = 60;
     timerElement.textContent = timeLeft;
     isRunning = false;
 });

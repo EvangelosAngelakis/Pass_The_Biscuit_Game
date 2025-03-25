@@ -57,7 +57,7 @@ startButton.addEventListener('click', () => {
 
 RstTimer.addEventListener('click', () => {
     clearInterval(countdown);
-    timeLeft = 59;
+    timeLeft = 60;
     timerElement.textContent = timeLeft;
     isRunning = false;
 });
