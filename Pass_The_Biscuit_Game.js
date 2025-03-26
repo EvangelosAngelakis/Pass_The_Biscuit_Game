@@ -1,3 +1,13 @@
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var contentDiv = document.getElementById('contentDiv');
+    if (contentDiv.classList.contains('hidden')) {
+        contentDiv.classList.remove('hidden');
+    } else {
+        contentDiv.classList.add('hidden');
+    }
+});
+
+
 const selectedOptions = {
     CustardCreams: ["Cycling", "Crawl", "Bend", "Gymnastics", "Football", "Skip", "Sprint", "Painting", "Cleaning", "Surfing", "Jump", "Walk", "Tennis", "Spin", "Stretch"],
     Bourbon: ["Meditating", "Writing", "Martial Arts", "Slide", "Cricket", "Dancing", "Basketball", "Shopping", "Exercising", "Drinking", "Climb", "Skateboarding", "Volleyball", "Jog", "Swim"],

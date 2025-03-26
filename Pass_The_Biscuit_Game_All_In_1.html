@@ -6,13 +6,13 @@
         <style>
 body {
     width: 350px;
-    height: 680px;
+    height: 790px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: medium;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
-    background-size: 360px 690px;
+    background-size: 360px 800px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
@@ -23,6 +23,9 @@ body {
 #title {
     background-color: rgba(245, 245, 245, 0.2);
     margin-top: -5px;
+}
+.hidden {
+    display: none;
 }
 .text-elements {
     font-size: 90%;
@@ -176,7 +179,7 @@ body {
     font-weight: bold;
 }
 #RstTimer {
-    background-color: rgb(124, 1, 1);
+    background-color: rgb(154, 120, 185);
     color: aliceblue;
     height: 30px;
     width: 110px;
@@ -188,25 +191,22 @@ body {
     display: flex;
     font-size: xx-small;
 }
-.RstButton {
-    position: fixed;
-}
         </style>
-        <title>Drawing Idea Generator</title>
+        <title>Pass The Biscuit Game APP</title>
     </head>
     <body>
-        <h2 id="title">Pass The Biscuit Game</h2>
-        <div class="text-elements">
+        <h2 id="title">Pass The Biscuit Game APP</h2>
+        <button id="toggleButton">Instructions V-Λ</button>
+        <div class="text-elements" id="contentDiv">
             <div>
-         <p>1. Add all team names in the text boxes..</p>
-         <p>2. Select one of the Biscuits from the drop down list.</p>
-         <p>3. Start the timer and press the Biscuit button.</p>
-         <p>4. Mime the word to your teamate.</p>
-         <p>5. If your teamate guesses correctly, add a biscuit / point.</p>
+         <p id="paragraph">1. Add all team names in the text boxes..</p>
+         <p id="paragraph">2. Select one or all of the Biscuits from the drop down list.</p>
+         <p id="paragraph">3. Press the Biscuit button to select a word & Start the timer.</p>
+         <p id="paragraph">4. Mime or explain the word to your teammate.</p>
+         <p id="paragraph">5. If your teamate guesses correctly, add a biscuit / point.</p>
             </div>
          </div>
-         <br>
-        <br>
+         <br> <br> <br>
         <div class="inline-elements">
             <div>
                 <label id="operation1" for="operation">Select a biscuit:</label>
@@ -228,7 +228,7 @@ body {
                 <button id="Generate">Press to Select</button>
            </div>
         </div>
-        <br>
+        <br> <br>
         <div class="inline-elements1">
             <div>
                 <button id="RstTimer" onclick="resetTimer()">Reset Timer</button>
@@ -238,7 +238,7 @@ body {
                 <button id="startButton">Start / Pause Timer</button>
             </div>
         </div>
-        <br>
+        <br> <br>
         <div class="inline-elements2">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 1 name">
@@ -309,6 +309,16 @@ body {
             </div>
         </div>
         <script>
+document.getElementById('toggleButton').addEventListener('click', function() {
+    var contentDiv = document.getElementById('contentDiv');
+    if (contentDiv.classList.contains('hidden')) {
+        contentDiv.classList.remove('hidden');
+    } else {
+        contentDiv.classList.add('hidden');
+    }
+});
+
+
 const selectedOptions = {
     CustardCreams: ["Cycling", "Crawl", "Bend", "Gymnastics", "Football", "Skip", "Sprint", "Painting", "Cleaning", "Surfing", "Jump", "Walk", "Tennis", "Spin", "Stretch"],
     Bourbon: ["Meditating", "Writing", "Martial Arts", "Slide", "Cricket", "Dancing", "Basketball", "Shopping", "Exercising", "Drinking", "Climb", "Skateboarding", "Volleyball", "Jog", "Swim"],

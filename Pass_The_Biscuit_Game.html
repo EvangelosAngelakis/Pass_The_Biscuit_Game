@@ -4,21 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Pass_The_Biscuit_Game.css">
-        <title>Drawing Idea Generator</title>
+        <title>Pass The Biscuit Game</title>
     </head>
     <body>
-        <h2 id="title">Pass The Biscuit Game</h2>
-        <div class="text-elements">
+        <h2 id="title">Pass The Biscuit Game APP</h2>
+        <button id="toggleButton">Instructions V-Λ</button>
+        <div class="text-elements" id="contentDiv">
             <div>
-         <p>1. Add all team names in the text boxes..</p>
-         <p>2. Select one of the Biscuits from the drop down list.</p>
-         <p>3. Start the timer and press the Biscuit button.</p>
-         <p>4. Mime the word to your teamate.</p>
-         <p>5. If your teamate guesses correctly, add a biscuit / point.</p>
+                <p id="paragraph">1. Add all team names in the text boxes..</p>
+                <p id="paragraph">2. Select one or all of the Biscuits from the drop down list.</p>
+                <p id="paragraph">3. Press the Biscuit button to select a word & Start the timer.</p>
+                <p id="paragraph">4. Mime or explain the word to your teammate.</p>
+                <p id="paragraph">5. If your teamate guesses correctly, add a biscuit / point.</p>
             </div>
          </div>
-         <br>
-        <br>
+         <br> <br> <br>
         <div class="inline-elements">
             <div>
                 <label id="operation1" for="operation">Select a biscuit:</label>
@@ -40,7 +40,7 @@
                 <button id="Generate">Press to Select</button>
            </div>
         </div>
-        <br>
+        <br> <br>
         <div class="inline-elements1">
             <div>
                 <button id="RstTimer" onclick="resetTimer()">Reset Timer</button>
@@ -50,7 +50,7 @@
                 <button id="startButton">Start / Pause Timer</button>
             </div>
         </div>
-        <br>
+        <br> <br>
         <div class="inline-elements2">
             <form>
                 <input type="text" class="textbox" name="textbox" placeholder="Enter Team 1 name">
