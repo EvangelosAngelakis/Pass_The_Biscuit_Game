@@ -1,12 +1,12 @@
 body {
     width: 350px;
-    height: 790px;
+    height: 850px;
+    background-size: 360px 860px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: medium;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
-    background-size: 360px 800px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
@@ -17,6 +17,12 @@ body {
 #title {
     background-color: rgba(245, 245, 245, 0.2);
     margin-top: -5px;
+}
+#toggleButton {
+    background-color: antiquewhite;
+    border: solid black;
+    border-radius: 5px;
+    border-width: 1px;
 }
 .hidden {
     display: none;

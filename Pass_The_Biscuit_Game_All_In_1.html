@@ -6,13 +6,13 @@
         <style>
 body {
     width: 350px;
-    height: 790px;
+    height: 850px;
+    background-size: 360px 860px;
     font-family: Arial, sans-serif;
     text-align: center;
     align-items: center;
     font-size: medium;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
-    background-size: 360px 800px;
     background-repeat: no-repeat;
     background-position: center;
     border: solid black;
@@ -23,6 +23,12 @@ body {
 #title {
     background-color: rgba(245, 245, 245, 0.2);
     margin-top: -5px;
+}
+#toggleButton {
+    background-color: antiquewhite;
+    border: solid black;
+    border-radius: 5px;
+    border-width: 1px;
 }
 .hidden {
     display: none;
@@ -195,18 +201,21 @@ body {
         <title>Pass The Biscuit Game APP</title>
     </head>
     <body>
-        <h2 id="title">Pass The Biscuit Game APP</h2>
-        <button id="toggleButton">Instructions V-Λ</button>
+        <h2 id="title">Pass The Biscuit Game</h2>
+        <button id="toggleButton" class="toggleButton0">Press to Hide / View Instructions</button>
         <div class="text-elements" id="contentDiv">
             <div>
-         <p id="paragraph">1. Add all team names in the text boxes..</p>
-         <p id="paragraph">2. Select one or all of the Biscuits from the drop down list.</p>
-         <p id="paragraph">3. Press the Biscuit button to select a word & Start the timer.</p>
-         <p id="paragraph">4. Mime or explain the word to your teammate.</p>
-         <p id="paragraph">5. If your teamate guesses correctly, add a biscuit / point.</p>
+                <p id="paragraph">1. Add all team names in the team name boxes..</p>
+                <p id="paragraph">2. Select one or all of the Biscuits from the drop down list.</p>
+                <p id="paragraph">3. Press the Biscuit button to select a word.</p>
+                <p id="paragraph">4. Start the timer. You have 1 minute in total.</p>
+                <p id="paragraph">5. Mime or explain the word to your teammate.</p>
+                <p id="paragraph">6. If your teammate guesses correctly, add a biscuit / point.</p>
+                <p id="paragraph">7. Follow steps 3 to 6 until the time runs out.</p>
+                <p id="paragraph">8. The Team with the most points wins the game.</p>
             </div>
          </div>
-         <br> <br> <br>
+         <br> <br>
         <div class="inline-elements">
             <div>
                 <label id="operation1" for="operation">Select a biscuit:</label>
@@ -311,10 +320,25 @@ body {
         <script>
 document.getElementById('toggleButton').addEventListener('click', function() {
     var contentDiv = document.getElementById('contentDiv');
+    var toggleButton = document.getElementById('toggleButton'); 
+    var body = document.body; 
+
     if (contentDiv.classList.contains('hidden')) {
         contentDiv.classList.remove('hidden');
+        toggleButton.style.backgroundColor = 'antiquewhite';
+        toggleButton.style.color = 'black';
+        toggleButton.style.border = 'solid black';
+        toggleButton.style.borderWidth = '1px';
+        body.style.height = '850px';
+        body.style.backgroundSize = '360px 860px';
     } else {
         contentDiv.classList.add('hidden');
+        toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
+        toggleButton.style.color = 'rgb(172, 169, 169)';
+        toggleButton.style.border = 'solid grey';
+        toggleButton.style.borderWidth = '1px';
+        body.style.height = '560px';
+        body.style.backgroundSize = '360px 570px';
     }
 });
 
