@@ -5,7 +5,7 @@ document.getElementById('toggleButton').addEventListener('click', function() {
 
     if (contentDiv.classList.contains('hidden')) {
         contentDiv.classList.remove('hidden');
-        toggleButton.style.backgroundColor = 'antiquewhite';
+        toggleButton.style.backgroundColor = 'rgba(179, 196, 196, 0.356)';
         toggleButton.style.color = 'black';
         toggleButton.style.border = 'solid black';
         toggleButton.style.borderWidth = '1px';
