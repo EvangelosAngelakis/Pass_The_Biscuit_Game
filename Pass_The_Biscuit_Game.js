@@ -5,20 +5,16 @@ document.getElementById('toggleButton').addEventListener('click', function() {
 
     if (contentDiv.classList.contains('hidden')) {
         contentDiv.classList.remove('hidden');
-        toggleButton.style.backgroundColor = 'rgba(179, 196, 196, 0.356)';
-        toggleButton.style.color = 'black';
-        toggleButton.style.border = 'solid black';
-        toggleButton.style.borderWidth = '1px';
-        body.style.height = '850px';
+        toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
+        toggleButton.style.color = 'rgb(80, 79, 79)';
+        toggleButton.style.border = '1px solid black';
         body.style.backgroundSize = '360px 860px';
     } else {
         contentDiv.classList.add('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
         toggleButton.style.color = 'rgb(172, 169, 169)';
-        toggleButton.style.border = 'solid grey';
-        toggleButton.style.borderWidth = '1px';
-        body.style.height = '560px';
-        body.style.backgroundSize = '360px 570px';
+        toggleButton.style.border = '1px solid grey';
+        body.style.backgroundSize = 'auto';
     }
 });
 

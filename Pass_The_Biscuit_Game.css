@@ -1,27 +1,46 @@
 body {
     display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+.container {
+    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: auto;
-    height: auto;
     font-family: Arial, sans-serif;
     font-size: medium;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
-    background-repeat: repeat;
-    background-position: center;
-    border: solid black;
-    border-radius: 5px;
-    margin: 10px auto;
     padding: 5px;
+    height: auto;
+    width: auto;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
+    background-position: center;
 }
 #title {
     background-color: rgba(245, 245, 245, 0.2);
     margin-top: -5px;
 }
+.buttonNText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.2);
+    box-shadow: 5px 5px 5px gray;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: fit-content;
+}
 #toggleButton {
-    background-color: rgba(179, 196, 196, 0.356);
-    border: solid black;
+    background-color: rgba(245, 245, 245, 0.2);
+    color: rgb(80, 79, 79);
+    box-shadow: 5px 5px 5px gray;
+    border: solid gray;
     border-radius: 5px;
     border-width: 1px;
 }
@@ -33,12 +52,6 @@ body {
     text-align: left;
     align-items: left;
     padding-left: 5px;
-    background-color: rgba(179, 196, 196, 0.356);
-    box-shadow: 5px 5px 5px gray;
-    border: 1px solid gray;
-    border-radius: 5px;
-    margin-bottom: -20px;
-    margin-top: px;
 }
 .inline-elements {
     display: flex;
