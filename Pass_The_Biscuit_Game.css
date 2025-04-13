@@ -1,46 +1,45 @@
+:root {
+    --primary-color: rgb(255, 154, 114);
+    --background-color: #f9fafb;
+    --card-bg: white;
+    --gap: 1rem;
+  } 
 body {
-    display: flex;
-    justify-content: center;
     text-align: center;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: auto;
+    width: 100%;
     height: auto;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
     font-family: Arial, sans-serif;
     font-size: medium;
-    padding: 5px;
-    height: auto;
-    width: auto;
     background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("https://teledyne.box.com/shared/static/huvnf84532qad0scq1p3lhbuhlux3jjj.jpeg");
+    background-repeat: repeat;
     background-position: center;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px;
 }
-#title {
-    background-color: rgba(245, 245, 245, 0.2);
-    margin-top: -5px;
-}
-.buttonNText {
+header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    color: black;
+    padding: 1rem;
     text-align: center;
-    background-color: rgba(245, 245, 245, 0.2);
-    box-shadow: 5px 5px 5px gray;
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: fit-content;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 #toggleButton {
-    background-color: rgba(245, 245, 245, 0.2);
-    color: rgb(80, 79, 79);
-    box-shadow: 5px 5px 5px gray;
-    border: solid gray;
+    background-color: rgba(179, 196, 196, 0.356);
+    border: solid black;
     border-radius: 5px;
     border-width: 1px;
 }
@@ -52,11 +51,19 @@ body {
     text-align: left;
     align-items: left;
     padding-left: 5px;
+    background-color: rgba(179, 196, 196, 0.356);
+    box-shadow: 5px 5px 5px gray;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: auto;
+    margin-bottom: -20px;
+    margin-top: px;
 }
 .inline-elements {
     display: flex;
     margin-left: 5px;
     width: 355px;
+    margin-top: 20px;
 }
 .inline-elements > div {
     display: flex;
@@ -211,4 +218,22 @@ body {
     font-size: xx-small;
     margin-left: -100px;
 }
+@media (max-width: 1024px) {
+    .grid-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
+    .image-section img {
+      width: calc(50% - var(--gap));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .grid-section {
+      grid-template-columns: 1fr;
+    }
+
+    .image-section img {
+      width: 100%;
+    }
+  }
