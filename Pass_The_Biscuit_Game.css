@@ -16,7 +16,7 @@
   header {
     background-color: var(--primary-color);
     color: white;
-    padding: 2rem;
+    padding: 1px;
     text-align: center;
   }
   .container {
@@ -24,20 +24,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 #toggleButton {
-    background-color: rgba(179, 196, 196, 0.356);
-    border: solid black;
+    background-color: rgba(245, 245, 245, 0.2);
+    color: rgba(172, 169, 169);
+    border: 0px solid  rgb(212, 210, 210);
     border-radius: 5px;
     border-width: 1px;
 }
-.hidden {
-    display: none;
-}
 .text-elements {
+    display: none;
     font-size: 90%;
     text-align: left;
     align-items: left;
@@ -58,7 +57,6 @@
     gap: 2%;
     margin-left: 5px;
     width: 355px;
-    margin-top: 20px;
 }
 .inline-elements > div {
     display: flex;

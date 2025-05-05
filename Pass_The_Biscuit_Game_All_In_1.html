@@ -6,7 +6,7 @@
         <meta name="author" content="Evangelos Angelakis">
         <meta name="description" content="Pass the buscuit game. Select a category, press button, mime the word, add a point to your team.">
         <style>
-            :root {
+:root {
     --primary-color: #ffcb9b;
     --background-color: #f9fafb;
     --card-bg: rgb(255, 255, 255);
@@ -20,12 +20,11 @@
     background-color: var(--background-color);
     color: #111827;
     background-color: rgb(255, 251, 230);
-
   }
   header {
     background-color: var(--primary-color);
     color: white;
-    padding: 2rem;
+    padding: 1px;
     text-align: center;
   }
   .container {
@@ -33,20 +32,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 #toggleButton {
-    background-color: rgba(179, 196, 196, 0.356);
-    border: solid black;
+    background-color: rgba(245, 245, 245, 0.2);
+    color: rgba(172, 169, 169);
+    border: 0px solid  rgb(212, 210, 210);
     border-radius: 5px;
     border-width: 1px;
 }
-.hidden {
-    display: none;
-}
 .text-elements {
+    display: none;
     font-size: 90%;
     text-align: left;
     align-items: left;
@@ -67,7 +65,6 @@
     gap: 2%;
     margin-left: 5px;
     width: 355px;
-    margin-top: 20px;
 }
 .inline-elements > div {
     display: flex;
@@ -262,6 +259,20 @@
             <h1 id="title">Pass The Biscuit Game</h1>
         </header>
         <div class="container">
+            <button id="toggleButton" class="toggleButton0">Press to see Instructions</button>
+            <div class="text-elements" id="contentDiv">
+                <div>
+                    <p id="paragraph">1. Add all team names in the team name boxes..</p>
+                    <p id="paragraph">2. Select one or all of the Biscuits from the drop down list.</p>
+                    <p id="paragraph">3. Press the Biscuit button to select a word.</p>
+                    <p id="paragraph">4. Start the timer. You have 1 minute in total.</p>
+                    <p id="paragraph">5. Mime or explain the word to your teammate.</p>
+                    <p id="paragraph">6. If your teammate guesses correctly, add a biscuit / point.</p>
+                    <p id="paragraph">7. Follow steps 3 to 6 until the time runs out.</p>
+                    <p id="paragraph">8. The Team with the most points wins the game.</p>
+                </div>
+             </div>
+             <br><br>
         <div class="inline-elements">
             <div>
                 <label id="operation1" for="operation">Select a biscuit:</label>
@@ -358,29 +369,15 @@
             <button id="buttonMinus8" onclick="subtractPoint('counter8')">-</button>
             <button id="buttonPlus8" onclick="addPoint('counter8')">+</button>
         </div>
-        <br> <br>
-        <button id="toggleButton" class="toggleButton0">Press to Hide / View Instructions</button>
-        <div class="text-elements" id="contentDiv">
-            <div>
-                <p id="paragraph">1. Add all team names in the team name boxes..</p>
-                <p id="paragraph">2. Select one or all of the Biscuits from the drop down list.</p>
-                <p id="paragraph">3. Press the Biscuit button to select a word.</p>
-                <p id="paragraph">4. Start the timer. You have 1 minute in total.</p>
-                <p id="paragraph">5. Mime or explain the word to your teammate.</p>
-                <p id="paragraph">6. If your teammate guesses correctly, add a biscuit / point.</p>
-                <p id="paragraph">7. Follow steps 3 to 6 until the time runs out.</p>
-                <p id="paragraph">8. The Team with the most points wins the game.</p>
-            </div>
-         </div>
-         <br> <br>
         <div class="inline-elements10">
             <div>
                 <button class="RstButton" id="RstButton" onclick="resetPage()">Reset Game</button>
             </div>
         </div>
     </div>
+        <script src="Pass_The_Biscuit_Game.js"></script>
         <script>
-            document.getElementById('toggleButton').addEventListener('click', function() {
+document.getElementById('toggleButton').addEventListener('click', function() {
     var contentDiv = document.getElementById('contentDiv');
     var toggleButton = document.getElementById('toggleButton'); 
     var body = document.body; 
@@ -388,17 +385,38 @@
     if (contentDiv.classList.contains('hidden')) {
         contentDiv.classList.remove('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
-        toggleButton.style.color = 'rgb(80, 79, 79)';
-        toggleButton.style.border = '1px solid black';
-        body.style.backgroundSize = '360px 860px';
+        toggleButton.style.color = 'rgb(172, 169, 169)';
+        toggleButton.style.border = '1px solid  rgb(212, 210, 210)';
+        body.style.backgroundSize = 'auto';
     } else {
         contentDiv.classList.add('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
-        toggleButton.style.color = 'rgb(172, 169, 169)';
-        toggleButton.style.border = '1px solid grey';
-        body.style.backgroundSize = 'auto';
+        toggleButton.style.color = 'rgb(80, 79, 79)';
+        toggleButton.style.border = '1px solid black';
+        body.style.backgroundSize = '360px 860px';
     }
 });
+
+
+const button = document.getElementById("toggleButton");
+const paragraphs = document.getElementById("contentDiv");
+
+button.addEventListener("click", () => {
+  const isVisible = paragraphs.style.display === "block";
+
+  if (isVisible) {
+    paragraphs.style.display = "none";
+    button.textContent = "Press to see instructions";
+  } else {
+    paragraphs.style.display = "block";
+    button.textContent = "Press to hide instructions";
+    paragraphs.style.backgroundColor = "rgba(179, 196, 196, 0.356)";
+    paragraphs.style.boxShadow = "5px 5px 5px gray";
+    paragraphs.style.border = "1px solid gray";
+    paragraphs.style.borderRadius = "5px";
+  }
+});
+
 
 
 const selectedOptions = {
