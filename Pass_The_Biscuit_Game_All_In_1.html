@@ -34,14 +34,15 @@
     align-items: center;
     padding: 1rem;
     max-width: 1200px;
-    margin: 0 auto;
 }
 #toggleButton {
     background-color: rgba(245, 245, 245, 0.2);
     color: rgba(172, 169, 169);
-    border: 0px solid  rgb(212, 210, 210);
+    border: 1px solid  rgb(212, 210, 210);
     border-radius: 5px;
     border-width: 1px;
+    margin-top: -16px;
+    margin-bottom: 30px;
 }
 .text-elements {
     display: none;
@@ -51,11 +52,11 @@
     padding-left: 5px;
     background-color: rgba(179, 196, 196, 0.356);
     box-shadow: 5px 5px 5px gray;
-    border: 1px solid gray;
+    border: 0px solid gray;
     border-radius: 5px;
     width: auto;
-    margin-bottom: -20px;
-    margin-top: px;
+    margin-top: -30px;
+    margin-bottom: 50px;
 }
 .inline-elements {
     display: flex;
@@ -64,6 +65,7 @@
     justify-content: center;
     gap: 2%;
     margin-left: 5px;
+    margin-top: -20px;
     width: 355px;
 }
 .inline-elements > div {
@@ -250,7 +252,6 @@
       width: 100%;
     }
   }
-
         </style>
         <title>Pass The Biscuit Game</title>
     </head>
@@ -258,7 +259,7 @@
         <header>
             <h1 id="title">Pass The Biscuit Game</h1>
         </header>
-        <div class="container">
+        <div class="container" id="container">
             <button id="toggleButton" class="toggleButton0">Press to see Instructions</button>
             <div class="text-elements" id="contentDiv">
                 <div>
@@ -272,7 +273,6 @@
                     <p id="paragraph">8. The Team with the most points wins the game.</p>
                 </div>
              </div>
-             <br><br>
         <div class="inline-elements">
             <div>
                 <label id="operation1" for="operation">Select a biscuit:</label>
@@ -385,14 +385,14 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     if (contentDiv.classList.contains('hidden')) {
         contentDiv.classList.remove('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
-        toggleButton.style.color = 'rgb(172, 169, 169)';
+        toggleButton.style.color = 'rgba(172, 169, 169)';
         toggleButton.style.border = '1px solid  rgb(212, 210, 210)';
         body.style.backgroundSize = 'auto';
     } else {
         contentDiv.classList.add('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
-        toggleButton.style.color = 'rgb(80, 79, 79)';
-        toggleButton.style.border = '1px solid black';
+        toggleButton.style.color = 'rgba(172, 169, 169)';
+        toggleButton.style.border = '1px solid  rgb(230, 229, 229)';
         body.style.backgroundSize = '360px 860px';
     }
 });
@@ -410,13 +410,12 @@ button.addEventListener("click", () => {
   } else {
     paragraphs.style.display = "block";
     button.textContent = "Press to hide instructions";
-    paragraphs.style.backgroundColor = "rgba(179, 196, 196, 0.356)";
+    paragraphs.style.backgroundColor = "bisque";
     paragraphs.style.boxShadow = "5px 5px 5px gray";
-    paragraphs.style.border = "1px solid gray";
+    paragraphs.style.border = "1px solid rgb(212, 210, 210)";
     paragraphs.style.borderRadius = "5px";
   }
 });
-
 
 
 const selectedOptions = {

@@ -6,14 +6,14 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     if (contentDiv.classList.contains('hidden')) {
         contentDiv.classList.remove('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
-        toggleButton.style.color = 'rgb(172, 169, 169)';
+        toggleButton.style.color = 'rgba(172, 169, 169)';
         toggleButton.style.border = '1px solid  rgb(212, 210, 210)';
         body.style.backgroundSize = 'auto';
     } else {
         contentDiv.classList.add('hidden');
         toggleButton.style.backgroundColor = 'rgba(245, 245, 245, 0.2)';
-        toggleButton.style.color = 'rgb(80, 79, 79)';
-        toggleButton.style.border = '1px solid black';
+        toggleButton.style.color = 'rgba(172, 169, 169)';
+        toggleButton.style.border = '1px solid  rgb(230, 229, 229)';
         body.style.backgroundSize = '360px 860px';
     }
 });
@@ -31,13 +31,12 @@ button.addEventListener("click", () => {
   } else {
     paragraphs.style.display = "block";
     button.textContent = "Press to hide instructions";
-    paragraphs.style.backgroundColor = "rgba(179, 196, 196, 0.356)";
+    paragraphs.style.backgroundColor = "bisque";
     paragraphs.style.boxShadow = "5px 5px 5px gray";
-    paragraphs.style.border = "1px solid gray";
+    paragraphs.style.border = "1px solid rgb(212, 210, 210)";
     paragraphs.style.borderRadius = "5px";
   }
 });
-
 
 
 const selectedOptions = {
